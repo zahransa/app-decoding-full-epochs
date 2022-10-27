@@ -53,6 +53,7 @@ scores = cross_val_multiscore(clf, X, y, cv=5, scoring='roc_auc')
 roc_auc_mean = round(np.mean(scores), 3)
 roc_auc_std = round(np.std(scores), 3)
 
+
 print(f'CV scores: {scores}')
 print(f'Mean ROC AUC = {roc_auc_mean:.3f} (SD = {roc_auc_std:.3f})')
 
