@@ -58,4 +58,14 @@ print(f'CV scores: {scores}')
 print(f'Mean ROC AUC = {roc_auc_mean:.3f} (SD = {roc_auc_std:.3f})')
 
 
+fig, ax = plt.subplots()
+ax.boxplot(scores,
+           showmeans=True, # Green triangle marks the mean.
+           whis=(0, 100),  # Whiskers span the entire range of the data.
+           labels=['Left vs Right'])
+ax.set_ylabel('Score')
+ax.set_title('Cross-Validation Scores')
+fig.savefig(os.path.join('out_figs', 'Cross-Validation-Scores.png'))
+
+
 
