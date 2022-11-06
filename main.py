@@ -1,5 +1,6 @@
 
 import mne
+import os
 import numpy as np
 from sklearn.pipeline import make_pipeline
 from mne.decoding import Scaler, Vectorizer, cross_val_multiscore
